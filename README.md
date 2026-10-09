@@ -1,15 +1,15 @@
 # Resume Scanner Segregator
 
+### 🚀 Live demo: **https://shivesh900.github.io/resume-scanner-segregator/**
+
+The demo opens with 12 sample resumes already screened. You can also drop in your own PDF/DOCX files: everything runs in your browser and nothing is uploaded anywhere.
+
 AI-assisted recruitment tool that **parses PDF/DOCX resumes, scores every candidate against a job description, and segregates them into High, Medium and Low priority** so a recruiter can start with the best matches instead of reading every CV.
 
 - **Backend:** Python, Flask REST API, scikit-learn (TF-IDF similarity), pdfplumber, python-docx, SQLite
 - **Frontend:** React 18 + Vite recruiter dashboard (upload, kanban by priority, candidate drill-down, shortlist/reject, CSV export)
 - **CLI:** screen a folder of resumes from the terminal
 - Runs fully offline: no paid API keys, no GPU
-
-### 🚀 Live demo: **https://shivesh900.github.io/resume-scanner-segregator/**
-
-The demo opens with 12 sample resumes already screened. You can also drop in your own PDF/DOCX files: everything runs in your browser and nothing is uploaded anywhere.
 
 ![Recruiter dashboard](docs/dashboard.png)
 
