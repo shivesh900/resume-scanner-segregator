@@ -1,0 +1,689 @@
+{
+ "ambiguous": [
+  "js",
+  "ml",
+  "node",
+  "r programming",
+  "rest",
+  "torch",
+  "ts"
+ ],
+ "implies": {
+  "Computer Vision": [
+   "Machine Learning"
+  ],
+  "Deep Learning": [
+   "Machine Learning"
+  ],
+  "MySQL": [
+   "SQL"
+  ],
+  "NLP": [
+   "Machine Learning"
+  ],
+  "Next.js": [
+   "React"
+  ],
+  "PostgreSQL": [
+   "SQL"
+  ],
+  "PyTorch": [
+   "Machine Learning",
+   "Deep Learning"
+  ],
+  "TensorFlow": [
+   "Machine Learning",
+   "Deep Learning"
+  ],
+  "Transformers": [
+   "NLP"
+  ],
+  "scikit-learn": [
+   "Machine Learning"
+  ],
+  "spaCy": [
+   "NLP"
+  ]
+ },
+ "no_canonical_match": [
+  "Go",
+  "R"
+ ],
+ "section_headings": {
+  "certifications": [
+   "certifications",
+   "certificates",
+   "courses"
+  ],
+  "education": [
+   "education",
+   "academics",
+   "academic background",
+   "qualifications"
+  ],
+  "experience": [
+   "experience",
+   "work experience",
+   "professional experience",
+   "employment",
+   "internships",
+   "internship"
+  ],
+  "projects": [
+   "projects",
+   "academic projects",
+   "personal projects",
+   "key projects"
+  ],
+  "skills": [
+   "skills",
+   "technical skills",
+   "core skills",
+   "key skills",
+   "tech stack"
+  ],
+  "summary": [
+   "summary",
+   "profile",
+   "objective",
+   "about me",
+   "professional summary"
+  ]
+ },
+ "skills": {
+  "Data & Cloud": {
+   "AWS": [
+    "aws",
+    "amazon web services",
+    "ec2",
+    "s3",
+    "sagemaker"
+   ],
+   "Azure": [
+    "azure"
+   ],
+   "CI/CD": [
+    "ci/cd",
+    "github actions",
+    "jenkins"
+   ],
+   "Docker": [
+    "docker",
+    "containers"
+   ],
+   "GCP": [
+    "gcp",
+    "google cloud"
+   ],
+   "Git": [
+    "git",
+    "github",
+    "gitlab"
+   ],
+   "Kubernetes": [
+    "kubernetes",
+    "k8s"
+   ],
+   "Linux": [
+    "linux",
+    "unix"
+   ],
+   "MongoDB": [
+    "mongodb",
+    "mongo"
+   ],
+   "MySQL": [
+    "mysql"
+   ],
+   "PostgreSQL": [
+    "postgresql",
+    "postgres"
+   ],
+   "Redis": [
+    "redis"
+   ],
+   "Spark": [
+    "spark",
+    "pyspark",
+    "apache spark"
+   ]
+  },
+  "Design": {
+   "Adobe XD": [
+    "adobe xd"
+   ],
+   "Figma": [
+    "figma"
+   ],
+   "UI/UX": [
+    "ui/ux",
+    "ux design",
+    "ui design",
+    "user experience",
+    "wireframing",
+    "prototyping"
+   ]
+  },
+  "Machine Learning": {
+   "Computer Vision": [
+    "computer vision",
+    "image processing",
+    "opencv"
+   ],
+   "Data Visualization": [
+    "data visualization",
+    "matplotlib",
+    "seaborn",
+    "plotly"
+   ],
+   "Deep Learning": [
+    "deep learning",
+    "neural networks",
+    "neural network"
+   ],
+   "LangChain": [
+    "langchain"
+   ],
+   "MLOps": [
+    "mlops",
+    "mlflow",
+    "model deployment"
+   ],
+   "Machine Learning": [
+    "machine learning",
+    "ml"
+   ],
+   "NLP": [
+    "nlp",
+    "natural language processing",
+    "text mining"
+   ],
+   "NumPy": [
+    "numpy"
+   ],
+   "Pandas": [
+    "pandas"
+   ],
+   "Power BI": [
+    "power bi",
+    "powerbi"
+   ],
+   "PyTorch": [
+    "pytorch",
+    "torch"
+   ],
+   "RAG": [
+    "rag",
+    "retrieval augmented generation",
+    "retrieval-augmented generation"
+   ],
+   "Statistics": [
+    "statistics",
+    "hypothesis testing",
+    "probability"
+   ],
+   "Tableau": [
+    "tableau"
+   ],
+   "TensorFlow": [
+    "tensorflow",
+    "keras"
+   ],
+   "Transformers": [
+    "transformers",
+    "hugging face",
+    "huggingface",
+    "bert",
+    "llm",
+    "llms"
+   ],
+   "XGBoost": [
+    "xgboost",
+    "lightgbm"
+   ],
+   "scikit-learn": [
+    "scikit-learn",
+    "sklearn",
+    "scikit learn"
+   ],
+   "spaCy": [
+    "spacy"
+   ]
+  },
+  "Programming": {
+   "Bash": [
+    "bash",
+    "shell scripting"
+   ],
+   "C#": [
+    "c#",
+    "csharp"
+   ],
+   "C++": [
+    "c++",
+    "cpp"
+   ],
+   "Go": [
+    "golang"
+   ],
+   "Java": [
+    "java"
+   ],
+   "JavaScript": [
+    "javascript",
+    "js",
+    "es6"
+   ],
+   "Python": [
+    "python",
+    "python3"
+   ],
+   "R": [
+    "r programming",
+    "rstudio"
+   ],
+   "SQL": [
+    "sql"
+   ],
+   "TypeScript": [
+    "typescript",
+    "ts"
+   ]
+  },
+  "Soft Skills": {
+   "Communication": [
+    "communication"
+   ],
+   "Leadership": [
+    "leadership",
+    "mentoring"
+   ],
+   "Problem Solving": [
+    "problem solving",
+    "problem-solving"
+   ],
+   "Teamwork": [
+    "teamwork",
+    "collaboration"
+   ]
+  },
+  "Web": {
+   "CSS": [
+    "css",
+    "css3",
+    "tailwind",
+    "tailwind css"
+   ],
+   "Django": [
+    "django"
+   ],
+   "Express": [
+    "express",
+    "express.js"
+   ],
+   "FastAPI": [
+    "fastapi"
+   ],
+   "Flask": [
+    "flask"
+   ],
+   "GraphQL": [
+    "graphql"
+   ],
+   "HTML": [
+    "html",
+    "html5"
+   ],
+   "Next.js": [
+    "next.js",
+    "nextjs"
+   ],
+   "Node.js": [
+    "node.js",
+    "nodejs",
+    "node"
+   ],
+   "REST APIs": [
+    "rest api",
+    "rest apis",
+    "restful",
+    "rest"
+   ],
+   "React": [
+    "react",
+    "react.js",
+    "reactjs"
+   ]
+  }
+ },
+ "stop_words": [
+  "a",
+  "about",
+  "above",
+  "across",
+  "after",
+  "afterwards",
+  "again",
+  "against",
+  "all",
+  "almost",
+  "alone",
+  "along",
+  "already",
+  "also",
+  "although",
+  "always",
+  "am",
+  "among",
+  "amongst",
+  "amoungst",
+  "amount",
+  "an",
+  "and",
+  "another",
+  "any",
+  "anyhow",
+  "anyone",
+  "anything",
+  "anyway",
+  "anywhere",
+  "are",
+  "around",
+  "as",
+  "at",
+  "back",
+  "be",
+  "became",
+  "because",
+  "become",
+  "becomes",
+  "becoming",
+  "been",
+  "before",
+  "beforehand",
+  "behind",
+  "being",
+  "below",
+  "beside",
+  "besides",
+  "between",
+  "beyond",
+  "bill",
+  "both",
+  "bottom",
+  "but",
+  "by",
+  "call",
+  "can",
+  "cannot",
+  "cant",
+  "co",
+  "con",
+  "could",
+  "couldnt",
+  "cry",
+  "de",
+  "describe",
+  "detail",
+  "do",
+  "done",
+  "down",
+  "due",
+  "during",
+  "each",
+  "eg",
+  "eight",
+  "either",
+  "eleven",
+  "else",
+  "elsewhere",
+  "empty",
+  "enough",
+  "etc",
+  "even",
+  "ever",
+  "every",
+  "everyone",
+  "everything",
+  "everywhere",
+  "except",
+  "few",
+  "fifteen",
+  "fifty",
+  "fill",
+  "find",
+  "fire",
+  "first",
+  "five",
+  "for",
+  "former",
+  "formerly",
+  "forty",
+  "found",
+  "four",
+  "from",
+  "front",
+  "full",
+  "further",
+  "get",
+  "give",
+  "go",
+  "had",
+  "has",
+  "hasnt",
+  "have",
+  "he",
+  "hence",
+  "her",
+  "here",
+  "hereafter",
+  "hereby",
+  "herein",
+  "hereupon",
+  "hers",
+  "herself",
+  "him",
+  "himself",
+  "his",
+  "how",
+  "however",
+  "hundred",
+  "i",
+  "ie",
+  "if",
+  "in",
+  "inc",
+  "indeed",
+  "interest",
+  "into",
+  "is",
+  "it",
+  "its",
+  "itself",
+  "keep",
+  "last",
+  "latter",
+  "latterly",
+  "least",
+  "less",
+  "ltd",
+  "made",
+  "many",
+  "may",
+  "me",
+  "meanwhile",
+  "might",
+  "mill",
+  "mine",
+  "more",
+  "moreover",
+  "most",
+  "mostly",
+  "move",
+  "much",
+  "must",
+  "my",
+  "myself",
+  "name",
+  "namely",
+  "neither",
+  "never",
+  "nevertheless",
+  "next",
+  "nine",
+  "no",
+  "nobody",
+  "none",
+  "noone",
+  "nor",
+  "not",
+  "nothing",
+  "now",
+  "nowhere",
+  "of",
+  "off",
+  "often",
+  "on",
+  "once",
+  "one",
+  "only",
+  "onto",
+  "or",
+  "other",
+  "others",
+  "otherwise",
+  "our",
+  "ours",
+  "ourselves",
+  "out",
+  "over",
+  "own",
+  "part",
+  "per",
+  "perhaps",
+  "please",
+  "put",
+  "rather",
+  "re",
+  "same",
+  "see",
+  "seem",
+  "seemed",
+  "seeming",
+  "seems",
+  "serious",
+  "several",
+  "she",
+  "should",
+  "show",
+  "side",
+  "since",
+  "sincere",
+  "six",
+  "sixty",
+  "so",
+  "some",
+  "somehow",
+  "someone",
+  "something",
+  "sometime",
+  "sometimes",
+  "somewhere",
+  "still",
+  "such",
+  "system",
+  "take",
+  "ten",
+  "than",
+  "that",
+  "the",
+  "their",
+  "them",
+  "themselves",
+  "then",
+  "thence",
+  "there",
+  "thereafter",
+  "thereby",
+  "therefore",
+  "therein",
+  "thereupon",
+  "these",
+  "they",
+  "thick",
+  "thin",
+  "third",
+  "this",
+  "those",
+  "though",
+  "three",
+  "through",
+  "throughout",
+  "thru",
+  "thus",
+  "to",
+  "together",
+  "too",
+  "top",
+  "toward",
+  "towards",
+  "twelve",
+  "twenty",
+  "two",
+  "un",
+  "under",
+  "until",
+  "up",
+  "upon",
+  "us",
+  "very",
+  "via",
+  "was",
+  "we",
+  "well",
+  "were",
+  "what",
+  "whatever",
+  "when",
+  "whence",
+  "whenever",
+  "where",
+  "whereafter",
+  "whereas",
+  "whereby",
+  "wherein",
+  "whereupon",
+  "wherever",
+  "whether",
+  "which",
+  "while",
+  "whither",
+  "who",
+  "whoever",
+  "whole",
+  "whom",
+  "whose",
+  "why",
+  "will",
+  "with",
+  "within",
+  "without",
+  "would",
+  "yet",
+  "you",
+  "your",
+  "yours",
+  "yourself",
+  "yourselves"
+ ],
+ "thresholds": {
+  "high": 70.0,
+  "medium": 45.0
+ },
+ "weights": {
+  "experience": 0.15,
+  "preferred": 0.15,
+  "required": 0.5,
+  "similarity": 0.2
+ }
+}
