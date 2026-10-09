@@ -7,6 +7,10 @@ AI-assisted recruitment tool that **parses PDF/DOCX resumes, scores every candid
 - **CLI:** screen a folder of resumes from the terminal
 - Runs fully offline: no paid API keys, no GPU
 
+### 🚀 Live demo: **https://shivesh900.github.io/resume-scanner-segregator/**
+
+The demo opens with 12 sample resumes already screened. You can also drop in your own PDF/DOCX files: everything runs in your browser and nothing is uploaded anywhere.
+
 ![Recruiter dashboard](docs/dashboard.png)
 
 ## Why
@@ -133,6 +137,16 @@ curl -X POST localhost:5000/api/jobs/<job_id>/resumes -F files=@sample_data/resu
 
 Data is kept in memory by default. Set `RSS_DB=screening.db` to persist it in SQLite.
 
+## How the live demo works
+
+GitHub Pages can only host static files, so the demo runs a **JavaScript port of the same pipeline** in the browser (`frontend/src/engine/`). It uses pdf.js and mammoth for PDF/DOCX text, the same regex extractors, a scikit-learn-compatible TF-IDF (same tokeniser, stop words, sublinear tf and smoothed idf) and the same weights and thresholds. The React dashboard is identical; only the API layer is swapped (`VITE_STATIC=1`).
+
+The two engines are kept honest by CI:
+- `scripts/export_web_assets.py` generates the browser config (skills taxonomy, implications, section headings, stop words, weights, thresholds) from the Python source. CI fails if it is stale.
+- `scripts/check_web_parity.py` runs both engines on the 12 sample resumes and requires **identical** scores, buckets, skills and experience. It currently passes on 12/12.
+
+The Flask API remains the "real" backend for local and server use.
+
 ## Results (measured on the bundled data)
 
 `sample_data/` contains **12 synthetic resumes** (8 PDF, 4 DOCX; all people, emails and companies are fictional) and two job descriptions. Each resume has a hand-assigned expected priority for the ML Engineer role in `sample_data/labels.csv`. `python scripts/evaluate.py` prints:
@@ -179,7 +193,8 @@ resume_scanner/
   api.py          Flask REST API (+ serves the React build)
   cli.py          command-line interface
 frontend/         React + Vite dashboard
-scripts/          generate_sample_data.py, evaluate.py
+  src/engine/     browser port of the pipeline (core.js, parse.js, localApi.js) for the live demo
+scripts/          generate_sample_data.py, evaluate.py, export_web_assets.py, check_web_parity.py
 sample_data/      synthetic resumes, job descriptions, labels
 tests/            pytest suite (parsing, extraction, scoring, API)
 ```
@@ -190,7 +205,7 @@ tests/            pytest suite (parsing, extraction, scoring, API)
 pytest -q        # 29 tests
 ```
 
-GitHub Actions runs the test suite and the evaluation on Python 3.10 and 3.12, and builds the React dashboard, on every push and pull request.
+GitHub Actions runs the test suite, the evaluation and the Python↔browser parity check on Python 3.10 and 3.12, and builds the React dashboard, on every push and pull request. A second workflow deploys the live demo to GitHub Pages.
 
 ## Limitations and future work
 

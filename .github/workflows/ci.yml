@@ -21,6 +21,14 @@ jobs:
       - run: pytest -q
       - name: Evaluate on the bundled synthetic resumes
         run: python scripts/evaluate.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Browser engine is in sync with Python and gives identical results
+        run: |
+          python scripts/export_web_assets.py
+          git diff --exit-code frontend/src/engine/config.json
+          python scripts/check_web_parity.py
 
   frontend:
     runs-on: ubuntu-latest
@@ -31,8 +39,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: frontend/package-lock.json
       - run: npm ci
       - run: npm run build
+      - run: npm run build:pages
