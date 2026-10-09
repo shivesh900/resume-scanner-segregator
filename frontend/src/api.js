@@ -1,3 +1,5 @@
+import { localApi } from "./engine/localApi.js";
+
 const BASE = import.meta.env.VITE_API_URL || "";
 
 async function request(path, options = {}) {
@@ -14,7 +16,8 @@ const json = (method, body) => ({
   method, headers: { "Content-Type": "application/json" }, body: JSON.stringify(body),
 });
 
-export const api = {
+const remoteApi = {
+  mode: "server",
   health: () => request("/api/health"),
   jobs: () => request("/api/jobs"),
   createJob: (title, description) => request("/api/jobs", json("POST", { title, description })),
@@ -29,3 +32,6 @@ export const api = {
   demo: () => request("/api/demo", { method: "POST" }),
   exportUrl: (jobId) => `${BASE}/api/jobs/${jobId}/export.csv`,
 };
+
+// VITE_STATIC=1 (the GitHub Pages build) runs the whole pipeline in the browser.
+export const api = import.meta.env.VITE_STATIC === "1" ? localApi : remoteApi;

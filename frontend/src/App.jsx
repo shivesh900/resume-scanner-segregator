@@ -154,7 +154,10 @@ export default function App() {
 
   useEffect(() => {
     api.health().then(() => setOnline(true)).catch(() => setOnline(false));
-    refreshJobs().catch(() => {});
+    refreshJobs().then(async () => {
+      // first visit to the browser demo: show results straight away
+      if (api.mode === "browser" && !(await api.jobs()).length) await loadDemo();
+    }).catch(() => {});
   }, []);
 
   useEffect(() => {
@@ -211,7 +214,10 @@ export default function App() {
       <header>
         <div className="brand"><span className="logo">RS</span><div><h1>Resume Scanner Segregator</h1><p>AI-assisted resume parsing & candidate shortlisting</p></div></div>
         <div className="row">
-          <span className={`dot ${online ? "on" : online === false ? "off" : ""}`}>{online ? "API online" : online === false ? "API offline" : "…"}</span>
+          <span className={`dot ${online ? "on" : online === false ? "off" : ""}`}>
+            {api.mode === "browser" ? "Runs in your browser" : online ? "API online" : online === false ? "API offline" : "…"}
+          </span>
+          <a className="button ghost" href="https://github.com/shivesh900/resume-scanner-segregator" target="_blank" rel="noreferrer">GitHub</a>
           <button onClick={loadDemo} disabled={busy}>Load demo data</button>
           <button className="primary" onClick={() => setShowNew(true)}>+ New job</button>
         </div>
@@ -236,6 +242,7 @@ export default function App() {
             <div className="empty card">
               <h2>Screen resumes in seconds</h2>
               <p>Create a job opening, drop in PDF/DOCX resumes, and candidates are parsed, scored against the job description and sorted into High, Medium and Low priority.</p>
+              {api.mode === "browser" && <p className="small">This live demo runs the full pipeline in your browser. Resumes never leave your device. The sample resumes are fictional.</p>}
               <button className="primary" onClick={loadDemo} disabled={busy}>Try it with demo data</button>
             </div>
           )}
@@ -245,7 +252,9 @@ export default function App() {
                 <div className="row spread">
                   <h2>{job.title}</h2>
                   <div className="row">
-                    <a className="button" href={api.exportUrl(job.id)}>Export CSV</a>
+                    {api.exportCsv
+                      ? <button onClick={() => api.exportCsv(job.id)}>Export CSV</button>
+                      : <a className="button" href={api.exportUrl(job.id)}>Export CSV</a>}
                     <button className="ghost" onClick={removeJob}>Delete</button>
                   </div>
                 </div>
