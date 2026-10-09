@@ -1,0 +1,10 @@
+Frontend Developer (React)
+Build the recruiter dashboard for a hiring product.
+
+Requirements
+- 2+ years of experience building web apps
+- JavaScript, TypeScript, React, HTML and CSS
+- Consuming REST APIs, Git
+
+Nice to have
+- Next.js, Tailwind, Figma, Node.js

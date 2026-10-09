@@ -1,0 +1,19 @@
+Machine Learning Engineer (Graduate / Early Career)
+We are hiring a Machine Learning Engineer to build NLP features for our recruiting platform.
+
+Responsibilities
+- Train, evaluate and ship machine learning models for text classification and information extraction
+- Build data pipelines and expose models through REST APIs
+- Collaborate with product and backend teams
+
+Requirements
+- 1+ years of experience in machine learning (internships count)
+- Strong Python, SQL and Git
+- Hands-on with scikit-learn and PyTorch, Pandas and NumPy
+- Experience with NLP (text classification, NER, embeddings)
+- Built or consumed REST APIs
+
+Nice to have
+- Docker and AWS
+- Flask or FastAPI
+- Hugging Face Transformers, MLOps (MLflow)
